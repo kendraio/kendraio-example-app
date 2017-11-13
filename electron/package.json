@@ -1,0 +1,21 @@
+{
+  "name": "kendraio-example",
+  "description": "Kendraio Example",
+  "author": "Kendra Team <team@kendra.io>",
+  "license": "UNLICENSED",
+  "version": "0.1.0",
+  "main": "main.js",
+  "devDependencies": {
+    "electron-builder": "^19.45.4"
+  },
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "io.kendra.example",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    }
+  }
+}
