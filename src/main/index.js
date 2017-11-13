@@ -2,7 +2,7 @@
 
 import { app, BrowserWindow } from 'electron'
 
-const isDevelopment = process.env.NODE_ENV !== 'production'
+const isDevelopment = false; //process.env.NODE_ENV !== 'production'
 
 // Global reference to mainWindow
 // Necessary to prevent win from being garbage collected

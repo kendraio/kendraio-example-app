@@ -43,5 +43,8 @@
     "renderer": {
       "webpackConfig": "webpack.renderer.js"
     }
+  },
+  "resolutions": {
+    "webpack-sources": "1.0.1"
   }
 }
