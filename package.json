@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build -prod --aot --build-optimizer -oh none -op electron/build",
+    "build": "ng build -prod --aot --build-optimizer -oh none -op electron/renderer",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

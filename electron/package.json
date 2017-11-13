@@ -2,6 +2,7 @@
   "name": "kendraio-example",
   "description": "Kendraio Example",
   "author": "Kendra Team <team@kendra.io>",
+  "license": "UNLICENSED",
   "version": "0.1.0",
   "main": "main.js",
   "devDependencies": {
