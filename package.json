@@ -1,7 +1,10 @@
 {
   "name": "kendraio-example",
-  "version": "0.0.0",
-  "license": "MIT",
+  "description": "Kendraio Example",
+  "author": "Kendra Team <team@kendra.io>",
+  "license": "UNLICENSED",
+  "version": "0.1.0",
+  "main": "electron/main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +12,15 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "icons": "electron-icon-maker --input=./icons/kendra-favicon.png --output=./icons/build"
+    "icons": "electron-icon-maker --input=./icons/kendra-favicon.png --output=./icons/build",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "io.kendra.example",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    }
   },
   "private": true,
   "dependencies": {
@@ -32,6 +43,7 @@
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
+    "electron-builder": "^19.45.4",
     "@angular/cli": "1.5.0",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
