@@ -1,10 +1,27 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Store} from "@ngrx/store";
+import {Observable} from "rxjs/Observable";
+import {HIDE_MODAL} from "./reducers/modal";
+
+import "../sass/styles.scss";
+
+interface AppState {
+    modal: boolean;
+}
 
 @Component({
-  selector: 'kio-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'kio-root',
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'kio';
+
+    isModalActive$: Observable<boolean>;
+
+    constructor(private store: Store<AppState>) {
+        this.isModalActive$ = store.select('modal');
+    }
+
+    closeModal() {
+        this.store.dispatch({ type: HIDE_MODAL });
+    }
 }
