@@ -1,25 +1,17 @@
 {
-  "name": "kendraio-example-app",
+  "name": "kendraio-example",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "electron-webpack dev",
-    "compile": "electron-webpack",
-    "dist": "yarn compile && electron-builder",
-    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
-    "icon": "electron-icon-maker --input=./icon/kendra-favicon.png --output=./build"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build -prod --aot --build-optimizer -oh none -op electron/build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "icons": "electron-icon-maker --input=./icons/kendra-favicon.png --output=./icons/build"
   },
-  "devDependencies": {
-    "angular2-template-loader": "^0.6.2",
-    "electron": "^1.7.9",
-    "electron-builder": "^19.45.0",
-    "electron-webpack": "^1.11.0",
-    "electron-webpack-ts": "^1.2.0",
-    "node-sass": "^4.6.0",
-    "sass-loader": "^6.0.6",
-    "typescript": "^2.6.1",
-    "webpack": "^3.8.1"
-  },
+  "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
@@ -30,23 +22,30 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
-    "@ngrx/effects": "^4.1.0",
-    "@ngrx/router-store": "^4.1.0",
-    "@ngrx/store": "^4.1.0",
-    "bulma": "^0.6.1",
     "core-js": "^2.4.1",
-    "electron-icon-maker": "^0.0.4",
-    "font-awesome": "^4.7.0",
     "rxjs": "^5.5.2",
-    "source-map-support": "^0.5.0",
     "zone.js": "^0.8.14"
   },
-  "electronWebpack": {
-    "renderer": {
-      "webpackConfig": "webpack.renderer.js"
-    }
-  },
-  "resolutions": {
-    "webpack-sources": "1.0.1"
+  "devDependencies": {
+    "electron-icon-maker": "^0.0.4",
+    "@angular/cli": "1.5.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/language-service": "^5.0.0",
+    "@types/jasmine": "~2.5.53",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/node": "~6.0.60",
+    "codelyzer": "~3.2.0",
+    "jasmine-core": "~2.6.2",
+    "jasmine-spec-reporter": "~4.1.0",
+    "karma": "~1.7.0",
+    "karma-chrome-launcher": "~2.1.1",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~5.1.2",
+    "ts-node": "~3.2.0",
+    "tslint": "~5.7.0",
+    "typescript": "~2.4.2"
   }
 }
